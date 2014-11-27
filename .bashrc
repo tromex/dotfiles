@@ -16,7 +16,7 @@ RED='\[\033[0;31m\]'
 BBLUE='\[\033[1;34m\]'
 BLUE='\[\033[0;34m\]'
 NORMAL='\[\033[00m\]'
-PS1="${BLUE}(${GREEN}\w${BLUE}) ${GREEN}\$ ${NORMAL}"
+PS1="${BBLUE}(${BLUE}\w${BBLUE}) ${BGREEN}\$ ${NORMAL}"
 
 # Leave some commands out of history log
 export HISTIGNORE="&:??:[ ]*:clear:exit:logout"
