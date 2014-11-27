@@ -76,3 +76,7 @@ set wildignore+=*.pyc,*_build/*,*/coverage/*
 
 " jedi-vim setup
 
+" vim-gitgutter setup (https://github.com/airblade/vim-gitgutter)
+let g:gitgutter_map_keys = 0 " disable default key mapping
+let g:gitgutter_max_signs = 200
+highlight SignColumn ctermbg=233
