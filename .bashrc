@@ -49,6 +49,10 @@ netinfo ()
 
 # Completion-aware g<alias> bash aliases for each of the git aliases
 # git aliases are in .gitconfig
+
+# (https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash)
+source ~/git-completion.bash
+
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
