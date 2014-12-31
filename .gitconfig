@@ -10,7 +10,7 @@
 [push]
     default = simple
 [alias]
-    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
 
     a = add
     ap = add -p
@@ -20,12 +20,13 @@
     cam = commit -a -m
     m = commit --amend --verbose
 
-
     d = diff
     ds = diff --stat
     dc = diff --cached
 
     s = status -s
+    st = status
+
     co = checkout
     cob = checkout -b
     # list branches sorted by last modified
