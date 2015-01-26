@@ -18,8 +18,11 @@ BLUE='\[\033[0;34m\]'
 NORMAL='\[\033[00m\]'
 PS1="${BBLUE}(${BLUE}\w${BBLUE}) ${BGREEN}\$ ${NORMAL}"
 
+# Datetime for history
+export HISTTIMEFORMAT='%F %T '
+
 # Leave some commands out of history log
-export HISTIGNORE="&:??:[ ]*:clear:exit:logout"
+export HISTIGNORE="&:??:[ ]*:clear:exit:logout:pwd:ls:history*:vim"
 
 # Default editor
 export EDITOR=vim
