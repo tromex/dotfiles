@@ -23,7 +23,8 @@ set fo-=t " dont't auto wrap text when typing
 
 " Enable color scheme
 set t_Co=256
-color wombat256mod
+set background=dark
+color grb256
 highlight ColorColumn ctermbg=233
 
 " Tabs are 4 spaces
