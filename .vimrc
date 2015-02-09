@@ -71,10 +71,10 @@ vnoremap <Leader>s :sort<CR>
 set laststatus=2
 
 " ctrlP setup
-let g:ctrlp_max_height = 30
+let g:ctrlp_max_height = 5
 set wildignore+=*.pyc,*_build/*,*/coverage/*
 
 " vim-gitgutter setup (https://github.com/airblade/vim-gitgutter)
 let g:gitgutter_map_keys = 0 " disable default key mapping
-let g:gitgutter_max_signs = 200
+let g:gitgutter_max_signs = 400
 highlight SignColumn ctermbg=233
