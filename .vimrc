@@ -26,6 +26,8 @@ set t_Co=256
 color wombat256mod
 highlight ColorColumn ctermbg=233
 
+set hlsearch " Highlight search enabled
+
 " Tabs are 4 spaces
 set tabstop=4
 set softtabstop=4
