@@ -26,7 +26,8 @@ set t_Co=256
 color wombat256mod
 highlight ColorColumn ctermbg=233
 
-set hlsearch " Highlight search enabled
+" Highlight search
+set hlsearch
 
 " Tabs are 4 spaces
 set tabstop=4
@@ -35,19 +36,21 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
-" Set <Leader> key
-let mapleader = ","
+" Enable code folding (optimized for Python)
+set foldmethod=indent
+set foldnestmax=2
+
+" Mapping for fast open/close fold
+" TIP: zj,zk to move between folds
+nnoremap <space> za 
 
 " Disable Swap Files
 set nobackup
 set nowritebackup
 set noswapfile
 
-" Easy window movement
-noremap <c-h> <c-w>h
-noremap <c-j> <c-w>j
-noremap <c-k> <c-w>k
-noremap <c-l> <c-w>l
+" Set <Leader> key
+let mapleader = ","
 
 " Quick quit
 nnoremap <Leader>q :q<CR>
@@ -57,6 +60,8 @@ nnoremap <Leader>w :w<CR>
 
 " Quick sort
 vnoremap <Leader>s :sort<CR>
+
+" --- PLUGINS -----------------------------------------------------------------
 
 " vim-airline setup
 set laststatus=2
