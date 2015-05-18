@@ -20,6 +20,7 @@ set colorcolumn=80
 set tw=79
 set nowrap " dont't auto wrap on load
 set fo-=t " dont't auto wrap text when typing
+set rnu " Relative Numbering
 
 " Enable color scheme
 set t_Co=256
@@ -42,7 +43,7 @@ set foldnestmax=2
 
 " Mapping for fast open/close fold
 " TIP: zj,zk to move between folds
-nnoremap <space> za 
+nnoremap <space> za
 
 " Disable Swap Files
 set nobackup
