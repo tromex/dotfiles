@@ -31,6 +31,7 @@ export EDITOR=vim
 alias tmux='tmux -2'
 
 # List grep
+alias ll='ls -l'
 alias lg='ll | grep'
 
 # Directory navigation aliases
