@@ -27,6 +27,9 @@ export HISTIGNORE="&:??:[ ]*:clear:exit:logout:pwd:ls:history*:vim"
 # Default editor
 export EDITOR=vim
 
+# Force tmux to assume 256 colors terminal
+alias tmux='tmux -2'
+
 # List grep
 alias lg='ll | grep'
 
