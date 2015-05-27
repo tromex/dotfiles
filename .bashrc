@@ -8,21 +8,20 @@
 # Don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
 
+# Colorized git prompt (default path on ARCH)
+source /usr/share/git/completion/git-prompt.sh
+
+# Bash completion for git (default path on ARCH)
+source /usr/share/git/completion/git-completion.bash
+
 # Prompt
-BGREEN='\[\033[1;32m\]'
-GREEN='\[\033[0;32m\]'
-BRED='\[\033[1;31m\]'
-RED='\[\033[0;31m\]'
-BBLUE='\[\033[1;34m\]'
-BLUE='\[\033[0;34m\]'
-NORMAL='\[\033[00m\]'
-PS1="${BBLUE}(${BLUE}\w${BBLUE}) ${BGREEN}\$ ${NORMAL}"
+PS1='\[\033[1;34m\](\[\033[0;34m\]\w\[\033[1;34m\])$(__git_ps1 " [%s]") \[\033[1;32m\]\$\e[0m '
 
 # Datetime for history
 export HISTTIMEFORMAT='%F %T '
 
 # Leave some commands out of history log
-export HISTIGNORE="&:??:[ ]*:clear:exit:logout:pwd:ls:history*:vim"
+export HISTIGNORE="&:??:[ ]*:clear:exit:logout:pwd:ls:vim"
 
 # Default editor
 export EDITOR=vim
@@ -42,9 +41,6 @@ alias .....='cd ../../../..'
 
 # Completion-aware g<alias> bash aliases for each of the git aliases
 # git aliases are in .gitconfig
-
-# (https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash)
-source ~/git-completion.bash
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
