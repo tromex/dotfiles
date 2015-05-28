@@ -29,7 +29,8 @@ export EDITOR=vim
 # Force tmux to assume 256 colors terminal
 alias tmux='tmux -2'
 
-# List grep
+# List files
+alias ls='ls --color=auto'
 alias ll='ls -l'
 alias lg='ll | grep'
 
