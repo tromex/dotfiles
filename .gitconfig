@@ -20,6 +20,9 @@
     cam = commit -a -m
     m = commit --amend --verbose
 
+    g = grep
+    gc = grep --cached
+
     d = diff
     ds = diff --stat
     dc = diff --cached
