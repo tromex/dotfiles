@@ -27,6 +27,10 @@ set t_Co=256
 color wombat256mod
 highlight ColorColumn ctermbg=233
 
+" Disable spk noise
+set vb
+set t_vb=
+
 " Highlight search
 set hlsearch
 
