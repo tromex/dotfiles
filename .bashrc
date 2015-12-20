@@ -31,6 +31,7 @@ export EDITOR=vim
 alias tmux='tmux -2'
 
 # List grep
+alias ls='ls --color'
 alias ll='ls -l'
 alias lg='ll | grep'
 
@@ -44,7 +45,7 @@ alias .....='cd ../../../..'
 # git aliases are in .gitconfig
 
 # (https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash)
-source ~/git-completion.bash
+source ~/scripts/git-completion.bash
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
