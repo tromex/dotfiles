@@ -24,7 +24,7 @@ set rnu " Relative Numbering
 
 " Enable color scheme
 set t_Co=256
-color wombat256mod
+color wombat256
 highlight ColorColumn ctermbg=233
 
 " Disable spk noise
@@ -67,9 +67,6 @@ nnoremap <Leader>w :w<CR>
 vnoremap <Leader>s :sort<CR>
 
 " --- PLUGINS -----------------------------------------------------------------
-
-" vim-airline setup
-set laststatus=2
 
 " ctrlP setup
 let g:ctrlp_max_height = 5

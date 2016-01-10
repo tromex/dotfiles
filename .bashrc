@@ -8,6 +8,9 @@
 # Don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
 
+# Export to PATH user gem directory
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
 # Colorized git prompt (default path on ARCH)
 source /usr/share/git/completion/git-prompt.sh
 
