@@ -18,4 +18,4 @@ XTerm*color13: rgb:ec/93/d3
 XTerm*color14: rgb:93/e0/e3
 XTerm*color15: rgb:ff/ff/ff
 
-XTerm*faceName: Liberation Mono:size=10:antialias=false
+XTerm*faceName: Liberation Mono:size=10:antialias=true
