@@ -24,7 +24,7 @@ set rnu " Relative Numbering
 
 " Enable color scheme
 set t_Co=256
-color wombat256
+color wombat256mod
 highlight ColorColumn ctermbg=233
 
 " Disable spk noise
