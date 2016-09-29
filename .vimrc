@@ -68,6 +68,9 @@ vnoremap <Leader>s :sort<CR>
 
 " --- PLUGINS -----------------------------------------------------------------
 
+" vim-airline setup
+set laststatus=2
+
 " ctrlP setup
 let g:ctrlp_max_height = 5
 set wildignore+=*.pyc,*_build/*,*/coverage/*

@@ -80,6 +80,9 @@ alias v='vim'
 alias p2='python2'
 alias p3='python3'
 
+# Tmux always forcing 256 colors
+alias tmux='tmux -2'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
