@@ -61,6 +61,7 @@ let mapleader = ","
 
 " NERDtree
 map <Leader>n :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Quick quit
 nnoremap <Leader>q :q<CR>
