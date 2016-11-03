@@ -85,3 +85,6 @@ set wildignore+=*.pyc,*_build/*,*/coverage/*
 let g:gitgutter_map_keys = 0 " disable default key mapping
 let g:gitgutter_max_signs = 400
 highlight SignColumn ctermbg=233
+
+" NERDtree
+let NERDTreeIgnore = ['\.pyc$']
