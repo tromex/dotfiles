@@ -11,7 +11,7 @@ execute pathogen#helptags()
 autocmd! bufwritepost .vimrc source %
 
 " Syntax highlighting
-syntax on
+syntax enable
 filetype plugin indent on
 
 " Showing line numbers and lenght
@@ -23,9 +23,11 @@ set fo-=t " dont't auto wrap text when typing
 set rnu " Relative Numbering
 
 " Enable color scheme
-set t_Co=256
-color wombat256mod
-highlight ColorColumn ctermbg=233
+" consider setting your terminal emulator's colorscheme to used the Solarized
+" palette (http://ethanschoonover.com/solarized)
+set t_Co=16
+set background=dark
+color solarized
 
 " Disable spk noise
 set vb
@@ -56,6 +58,9 @@ set noswapfile
 
 " Set <Leader> key
 let mapleader = ","
+
+" NERDtree
+map <Leader>n :NERDTreeToggle<CR>
 
 " Quick quit
 nnoremap <Leader>q :q<CR>
