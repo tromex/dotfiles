@@ -1,43 +1,30 @@
 " =============================================================================
-" TROMEX VIMRC
+" TROMEX NVIM INIT
 " =============================================================================
 
-" Enable plugin manager
-filetype off
-execute pathogen#infect()
-execute pathogen#helptags()
+" Plugins (https://github.com/junegunn/vim-plug)
+call plug#begin('~/.local/share/nvim/plugged')
 
-" Auto reload .vimrc on save
-autocmd! bufwritepost .vimrc source %
+Plug 'vim-airline/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'edkolev/tmuxline.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'altercation/vim-colors-solarized'
 
-" Syntax highlighting
-syntax enable
-filetype plugin indent on
+call plug#end()
 
-" Showing line numbers and lenght
+" Showing line numbers and length
 set number
 set colorcolumn=80
 set tw=79
-set nowrap " dont't auto wrap on load
+set nowrap
 set fo-=t " dont't auto wrap text when typing
-set rnu " Relative Numbering
+set rnu
 
-" Enable color scheme
-" consider setting your terminal emulator's colorscheme to used the Solarized
-" palette (http://ethanschoonover.com/solarized)
-set t_Co=16
+" Color scheme
 set background=dark
 color solarized
-
-" Allow transparency
-hi Normal ctermbg=none
-
-" Disable spk noise
-set vb
-set t_vb=
-
-" Highlight search
-set hlsearch
 
 " Tabs are 4 spaces
 set tabstop=4
@@ -45,19 +32,6 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
-
-" Enable code folding (optimized for Python)
-set foldmethod=indent
-set foldnestmax=2
-
-" Mapping for fast open/close fold
-" TIP: zj,zk to move between folds
-nnoremap <space> za
-
-" Disable Swap Files
-set nobackup
-set nowritebackup
-set noswapfile
 
 " Set <Leader> key
 let mapleader = ","
@@ -71,9 +45,6 @@ nnoremap <Leader>q :q<CR>
 
 " Quick save
 nnoremap <Leader>w :w<CR>
-
-" Quick sort
-vnoremap <Leader>s :sort<CR>
 
 " --- PLUGINS -----------------------------------------------------------------
 
