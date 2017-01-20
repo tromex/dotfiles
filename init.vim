@@ -33,6 +33,9 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
+" Incremental command preview
+set icm=split
+
 " Set <Leader> key
 let mapleader = ","
 
