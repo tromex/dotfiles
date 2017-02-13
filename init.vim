@@ -6,11 +6,15 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'edkolev/tmuxline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 
 call plug#end()
 
@@ -62,7 +66,11 @@ nnoremap <A-l> <C-w>l
 " --- PLUGINS -----------------------------------------------------------------
 
 " vim-airline setup
-set laststatus=2
+let g:airline#extensions#tabline#enabled = 2
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_enable_branch=1
+let g:airline_powerline_fonts=1
+let g:airline_theme= 'solarized'
 
 " ctrlP setup
 let g:ctrlp_max_height = 5
@@ -74,3 +82,6 @@ let g:gitgutter_max_signs = 400
 
 " NERDtree
 let NERDTreeIgnore = ['\.pyc$']
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
