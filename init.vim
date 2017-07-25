@@ -30,6 +30,9 @@ set rnu
 set background=dark
 color solarized
 
+" Allow transparency
+hi Normal ctermbg=none
+
 " Tabs are 4 spaces
 set tabstop=4
 set softtabstop=4

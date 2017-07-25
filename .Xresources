@@ -1,21 +1,5 @@
-XTerm*locale: true
-XTerm*foreground: rgb:e0/e0/e0
-XTerm*background: rgb:00/00/00
-XTerm*color0: rgb:3f/3f/3f
-XTerm*color1: rgb:70/50/50
-XTerm*color2: rgb:60/b4/8a
-XTerm*color3: rgb:df/af/8f
-XTerm*color4: rgb:9a/b8/d7
-XTerm*color5: rgb:dc/8c/c3
-XTerm*color6: rgb:8c/d0/d3
-XTerm*color7: rgb:dc/dc/dc
-XTerm*color8: rgb:70/90/80
-XTerm*color9: rgb:dc/a3/a3
-XTerm*color10: rgb:72/d5/a3
-XTerm*color11: rgb:f0/df/af
-XTerm*color12: rgb:94/bf/f3
-XTerm*color13: rgb:ec/93/d3
-XTerm*color14: rgb:93/e0/e3
-XTerm*color15: rgb:ff/ff/ff
-
-XTerm*faceName: Liberation Mono:size=10:antialias=true
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.rgba:       rgb
+Xft.hintstyle:  hintslight
