@@ -9,12 +9,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 
 call plug#end()
 
@@ -40,15 +35,20 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
+" netrw options
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 20
+
 " Incremental command preview
 set icm=split
 
 " Set <Leader> key
 let mapleader = ","
 
-" NERDtree
-map <Leader>n :NERDTreeToggle<CR>
-map <C-n> :NERDTreeToggle<CR>
+" netrw to navigate directories
+map <Leader>n :Lexplore<CR>
+map <C-n> :Lexplore<CR>
 
 " Quick quit
 nnoremap <Leader>q :q<CR>
@@ -76,15 +76,9 @@ let g:airline_powerline_fonts=1
 let g:airline_theme= 'solarized'
 
 " ctrlP setup
-let g:ctrlp_max_height = 5
+let g:ctrlp_max_height = 10
 set wildignore+=*.pyc,*_build/*,*/coverage/*
 
 " vim-gitgutter setup (https://github.com/airblade/vim-gitgutter)
 let g:gitgutter_map_keys = 0 " disable default key mapping
 let g:gitgutter_max_signs = 400
-
-" NERDtree
-let NERDTreeIgnore = ['\.pyc$']
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
