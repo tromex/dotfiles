@@ -75,11 +75,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-# Often used software aliases
-alias v='vim'
-alias p2='python2'
-alias p3='python3'
-
 # Tmux always forcing 256 colors
 alias tmux='tmux -2'
 
@@ -110,8 +105,3 @@ for al in `__git_aliases`; do
 done
 
 ###
-
-if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh ]; then
-    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
-fi
-

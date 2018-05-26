@@ -35,6 +35,9 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
+" enable mouse
+set mouse=a
+
 " netrw options
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
