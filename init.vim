@@ -38,6 +38,10 @@ set expandtab
 " enable mouse
 set mouse=a
 
+" fix strange characters problem on some terminal emulators
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+set guicursor=
+
 " netrw options
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
