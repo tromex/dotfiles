@@ -9,7 +9,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -23,7 +23,7 @@ set rnu
 
 " Color scheme
 set background=dark
-color solarized
+colorscheme gruvbox
 
 " Allow transparency
 hi Normal ctermbg=none
@@ -80,7 +80,6 @@ let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_enable_branch=1
 let g:airline_powerline_fonts=1
-let g:airline_theme= 'solarized'
 
 " ctrlP setup
 let g:ctrlp_max_height = 10
@@ -89,3 +88,4 @@ set wildignore+=*.pyc,*_build/*,*/coverage/*
 " vim-gitgutter setup (https://github.com/airblade/vim-gitgutter)
 let g:gitgutter_map_keys = 0 " disable default key mapping
 let g:gitgutter_max_signs = 400
+
