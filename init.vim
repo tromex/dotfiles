@@ -10,6 +10,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocompletion
+Plug 'Shougo/deoplete-clangx' " completion using clang
+Plug 'Shougo/neoinclude.vim' " completion from header files
+Plug 'octol/vim-cpp-enhanced-highlight' " syntax highlighting for c++
+Plug 'numkil/ag.nvim' " Ag command from nvim
 
 call plug#end()
 
@@ -88,4 +93,10 @@ set wildignore+=*.pyc,*_build/*,*/coverage/*
 " vim-gitgutter setup (https://github.com/airblade/vim-gitgutter)
 let g:gitgutter_map_keys = 0 " disable default key mapping
 let g:gitgutter_max_signs = 400
+
+" deoplete setup
+let g:deoplete#enable_at_startup = 1
+
+"" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
