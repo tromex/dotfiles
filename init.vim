@@ -15,6 +15,7 @@ Plug 'Shougo/deoplete-clangx' " completion using clang
 Plug 'Shougo/neoinclude.vim' " completion from header files
 Plug 'octol/vim-cpp-enhanced-highlight' " syntax highlighting for c++
 Plug 'numkil/ag.nvim' " Ag command from nvim
+Plug 'scrooloose/nerdtree' " File navigation with NERDTree
 
 call plug#end()
 
@@ -100,3 +101,5 @@ let g:deoplete#enable_at_startup = 1
 "" deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
+" NERDTree setup
+map <C-n> :NERDTreeToggle<CR>
