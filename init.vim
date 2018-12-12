@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-solarized8'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocompletion
 Plug 'Shougo/deoplete-clangx' " completion using clang
 Plug 'Shougo/neoinclude.vim' " completion from header files
@@ -28,11 +29,9 @@ set fo-=t " dont't auto wrap text when typing
 set rnu
 
 " Color scheme
+set termguicolors
 set background=dark
-colorscheme gruvbox
-
-" Allow transparency
-hi Normal ctermbg=none
+colorscheme solarized8_high
 
 " Tabs are 4 spaces
 set tabstop=4
