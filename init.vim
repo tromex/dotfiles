@@ -88,7 +88,7 @@ let g:airline_powerline_fonts=1
 
 " ctrlP setup
 let g:ctrlp_max_height = 10
-set wildignore+=*.pyc,*_build/*,*/coverage/*,cmake*/*,.git/*,.svn/*
+set wildignore+=*.pyc,*_build/*,*/coverage/*,*/cmake*/*,*/bin/*,*/.git/*,*/.svn/*
 
 " vim-gitgutter setup (https://github.com/airblade/vim-gitgutter)
 let g:gitgutter_map_keys = 0 " disable default key mapping
