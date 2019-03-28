@@ -17,13 +17,14 @@ Plug 'Shougo/neoinclude.vim' " completion from header files
 Plug 'octol/vim-cpp-enhanced-highlight' " syntax highlighting for c++
 Plug 'numkil/ag.nvim' " Ag command from nvim
 Plug 'scrooloose/nerdtree' " File navigation with NERDTree
+Plug 'tikhomirov/vim-glsl' " syntax highlighting for GLSL
 
 call plug#end()
 
 " Showing line numbers and length
 set number
-set colorcolumn=80
-set tw=79
+set colorcolumn=100
+set tw=99
 set nowrap
 set fo-=t " dont't auto wrap text when typing
 set rnu
@@ -77,6 +78,9 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" Define path to make :find work as expected
+set path=.,**,, 
 
 " --- PLUGINS -----------------------------------------------------------------
 
