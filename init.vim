@@ -31,8 +31,8 @@ set rnu
 
 " Color scheme
 set termguicolors
-set background=dark
-colorscheme solarized8_high
+set background=light
+colorscheme solarized8_flat
 
 " Tabs are 4 spaces
 set tabstop=4
