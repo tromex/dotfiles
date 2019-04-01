@@ -59,10 +59,6 @@ set icm=split
 " Set <Leader> key
 let mapleader = ","
 
-" netrw to navigate directories
-map <Leader>n :Lexplore<CR>
-map <C-n> :Lexplore<CR>
-
 " Quick quit
 nnoremap <Leader>q :q<CR>
 
@@ -80,7 +76,12 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 " Define path to make :find work as expected
-set path=.,**,, 
+set path+=.,**,,
+set wildmenu
+
+" Move between buffers
+nnoremap <C-j> :bnext<CR>
+nnoremap <C-k> :bprevious<CR>
 
 " --- PLUGINS -----------------------------------------------------------------
 
