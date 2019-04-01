@@ -7,10 +7,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'morhetz/gruvbox'
-Plug 'lifepillar/vim-solarized8'
+"Plug 'morhetz/gruvbox' " color theme
+Plug 'lifepillar/vim-solarized8' " color theme
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocompletion
 Plug 'Shougo/deoplete-clangx' " completion using clang
 Plug 'Shougo/neoinclude.vim' " completion from header files
@@ -18,6 +17,7 @@ Plug 'octol/vim-cpp-enhanced-highlight' " syntax highlighting for c++
 Plug 'numkil/ag.nvim' " Ag command from nvim
 Plug 'scrooloose/nerdtree' " File navigation with NERDTree
 Plug 'tikhomirov/vim-glsl' " syntax highlighting for GLSL
+Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' } " Gdb, LLDB and PDB integration :)
 
 call plug#end()
 
@@ -32,7 +32,7 @@ set rnu
 " Color scheme
 set termguicolors
 set background=dark
-colorscheme solarized8_high
+colorscheme solarized8
 
 " Tabs are 4 spaces
 set tabstop=4
