@@ -89,6 +89,9 @@ nnoremap <C-h> :find %:t:r.h<CR>
 " Move to c++ source file
 nnoremap <C-s> :find %:t:r.cpp<CR>
 
+" Ctrl-P replacement (trailing space to make life easier)
+nnoremap <C-p> :find 
+
 " --- PLUGINS -----------------------------------------------------------------
 
 " vim-airline setup
