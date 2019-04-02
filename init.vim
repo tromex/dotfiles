@@ -83,6 +83,12 @@ set wildmenu
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
 
+" Move to c++ header file
+nnoremap <C-h> :find %:t:r.h<CR>
+
+" Move to c++ source file
+nnoremap <C-s> :find %:t:r.cpp<CR>
+
 " --- PLUGINS -----------------------------------------------------------------
 
 " vim-airline setup
