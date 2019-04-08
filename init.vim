@@ -7,10 +7,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'morhetz/gruvbox'
-Plug 'lifepillar/vim-solarized8'
+"Plug 'morhetz/gruvbox' " color theme
+Plug 'lifepillar/vim-solarized8' " color theme
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocompletion
 Plug 'Shougo/deoplete-clangx' " completion using clang
 Plug 'Shougo/neoinclude.vim' " completion from header files
@@ -18,6 +17,7 @@ Plug 'octol/vim-cpp-enhanced-highlight' " syntax highlighting for c++
 Plug 'numkil/ag.nvim' " Ag command from nvim
 Plug 'scrooloose/nerdtree' " File navigation with NERDTree
 Plug 'tikhomirov/vim-glsl' " syntax highlighting for GLSL
+Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' } " Gdb, LLDB and PDB integration :)
 
 call plug#end()
 
@@ -82,6 +82,15 @@ set wildmenu
 " Move between buffers
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
+
+" Move to c++ header file
+nnoremap <C-h> :find %:t:r.h<CR>
+
+" Move to c++ source file
+nnoremap <C-s> :find %:t:r.cpp<CR>
+
+" Ctrl-P replacement (trailing space to make life easier)
+nnoremap <C-p> :find 
 
 " --- PLUGINS -----------------------------------------------------------------
 
