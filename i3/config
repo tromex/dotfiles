@@ -156,10 +156,9 @@ bar {
 }
 
 # Pulse Audio controls
-# To find the right source (2 in this case) use the command: pactl list sinks
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% # #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% # #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec ~/.config/i3/scripts/increase_volume.sh
+bindsym XF86AudioLowerVolume exec ~/.config/i3/scripts/decrease_volume.sh
+bindsym XF86AudioMute exec ~/.config/i3/scripts/mute.sh
 
 # Putting workspaces on specific screens
 workspace 1 output HDMI-0
