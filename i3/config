@@ -153,6 +153,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+
+        colors {
+            statusline "#839496"
+        }
 }
 
 # Pulse Audio controls
