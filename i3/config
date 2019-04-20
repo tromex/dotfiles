@@ -164,10 +164,6 @@ bindsym XF86AudioRaiseVolume exec ~/.config/i3/scripts/increase_volume.sh
 bindsym XF86AudioLowerVolume exec ~/.config/i3/scripts/decrease_volume.sh
 bindsym XF86AudioMute exec ~/.config/i3/scripts/mute.sh
 
-# Putting workspaces on specific screens
-workspace 1 output HDMI-0
-workspace 2 output DVI-D-0
-
 # Startup apps
 exec i3-sensible-terminal
 
