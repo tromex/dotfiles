@@ -18,6 +18,7 @@ Plug 'numkil/ag.nvim' " Ag command from nvim
 Plug 'scrooloose/nerdtree' " File navigation with NERDTree
 Plug 'tikhomirov/vim-glsl' " syntax highlighting for GLSL
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' } " Gdb, LLDB and PDB integration :)
+Plug 'cloudhead/neovim-fuzzy' " Fuzzy file finder. Requires install fzy (sudo apt install fzy)
 
 call plug#end()
 
@@ -92,8 +93,8 @@ nnoremap <C-h> :find %:t:r.h<CR>
 " Move to c++ source file
 nnoremap <C-s> :find %:t:r.cpp<CR>
 
-" Ctrl-P replacement (trailing space to make life easier)
-nnoremap <C-p> :find 
+" Ctrl-P replacement
+nnoremap <C-p> :FuzzyOpen<CR>
 
 " --- PLUGINS -----------------------------------------------------------------
 
