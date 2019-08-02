@@ -65,6 +65,9 @@ nnoremap <Leader>q :q<CR>
 " Quick save
 nnoremap <Leader>w :w<CR>
 
+" Search current word with Ag
+nnoremap <Leader>f :Ag <cword><CR>
+
 " Windows navigation with Alt+{h,j,k,l} also with terminal mode
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
