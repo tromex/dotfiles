@@ -1,3 +1,2 @@
 dmenu_git_checkout         Show branches on menu and checkout selected
-dmenu_vim_src_open         Find all source files and open select with vim
-
+dmenu_vim_src_open         Find all source files and open selected with nvim

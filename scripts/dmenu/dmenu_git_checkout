@@ -1,2 +1,2 @@
 #!/bin/sh
-git branch | dmenu -l 20 | xargs git checkout
+git branch | dmenu -p "Select a branch to checkout:" -l 20 | xargs git checkout
