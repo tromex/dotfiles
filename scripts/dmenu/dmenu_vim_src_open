@@ -1,3 +1,0 @@
-#!/bin/sh
-file=$(find -name "*.cpp" -o -name "*.h" -o -name "*.cpp" -o -name "*.hpp" |
-dmenu -i -l 20) && nvim $file
