@@ -1,2 +1,4 @@
 dmenu_git_checkout         Show branches on menu and checkout selected
 dmenu_open_code            Find all code files and open selected with $EDITOR
+dmenu_history_xclip        List history and copy selected to clipboard
+dmenu_history_run          List history and execute selected
