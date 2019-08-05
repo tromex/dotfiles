@@ -98,6 +98,11 @@ nnoremap <C-p> :find
 " Search with Ag the current word
 nnoremap <C-a> :Ag <cword><CR> 
 
+" Moving through git hunks
+nnoremap <F7> :GitGutterPrevHunk<CR>zz
+nnoremap <F8> :GitGutterNextHunk<CR>zz
+nnoremap <F9> :GitGutterPreviewHunk<CR>
+
 " --- PLUGINS -----------------------------------------------------------------
 
 " vim-airline setup
