@@ -1,0 +1,2 @@
+#!/bin/sh
+c=$(cat /home/tromex/scripts/dmenu/commands.txt | dmenu -l 20 | awk '{print $1}') && sh $DMENU_COMMANDS/$c

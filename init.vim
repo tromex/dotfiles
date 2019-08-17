@@ -18,13 +18,14 @@ Plug 'numkil/ag.nvim' " Ag command from nvim
 Plug 'scrooloose/nerdtree' " File navigation with NERDTree
 Plug 'tikhomirov/vim-glsl' " syntax highlighting for GLSL
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' } " Gdb, LLDB and PDB integration :)
+Plug 'cloudhead/neovim-fuzzy' " Fuzzy file finder. Requires install fzy (sudo apt install fzy)
 
 call plug#end()
 
 " Showing line numbers and length
 set number
-set colorcolumn=100
-set tw=99
+set colorcolumn=140
+set tw=139
 set nowrap
 set fo-=t " dont't auto wrap text when typing
 set rnu
@@ -65,6 +66,9 @@ nnoremap <Leader>q :q<CR>
 " Quick save
 nnoremap <Leader>w :w<CR>
 
+" Search current word with Ag
+nnoremap <Leader>f :Ag <cword><CR>
+
 " Windows navigation with Alt+{h,j,k,l} also with terminal mode
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
@@ -89,8 +93,16 @@ nnoremap <C-h> :find %:t:r.h<CR>
 " Move to c++ source file
 nnoremap <C-s> :find %:t:r.cpp<CR>
 
-" Ctrl-P replacement (trailing space to make life easier)
-nnoremap <C-p> :find 
+" Ctrl-P replacement
+nnoremap <C-p> :FuzzyOpen<CR>
+
+" Search with Ag the current word
+nnoremap <C-a> :Ag <cword><CR> 
+
+" Moving through git hunks
+nnoremap <F7> :GitGutterPrevHunk<CR>zz
+nnoremap <F8> :GitGutterNextHunk<CR>zz
+nnoremap <F9> :GitGutterPreviewHunk<CR>
 
 " --- PLUGINS -----------------------------------------------------------------
 
@@ -100,9 +112,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_enable_branch=1
 let g:airline_powerline_fonts=1
 
-" ctrlP setup
-let g:ctrlp_max_height = 10
-set wildignore+=*.pyc,*/build*,*/coverage/*,*/cmake*/*,*/bin*,*/.git/*,*/.svn/*,*/install*
+set wildignore+=*.pyc,*.o,*.m,*/coverage/*,*/.git/*,*/.svn/*,*/install*,*/*.dir/*
 
 " vim-gitgutter setup (https://github.com/airblade/vim-gitgutter)
 let g:gitgutter_map_keys = 0 " disable default key mapping
