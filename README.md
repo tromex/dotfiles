@@ -15,3 +15,5 @@ $ mkdir ~/.config/i3status
 $ cd ~/.config/i3status
 $ ln -s ~/dotfiles/i3/i3status.conf config
 
+## Install dwm
+$ cp dotfiles/dwm.desktop usr/share/xsessions/dwm.desktop
