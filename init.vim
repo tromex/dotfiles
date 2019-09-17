@@ -87,6 +87,9 @@ set wildmenu
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
 
+" Close current buffer
+nnoremap <Leader><F4> :bd<CR>
+
 " Move to c++ header file
 nnoremap <C-h> :find %:t:r.h<CR>
 
