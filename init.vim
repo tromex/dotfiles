@@ -104,6 +104,9 @@ nnoremap <F7> :GitGutterPrevHunk<CR>zz
 nnoremap <F8> :GitGutterNextHunk<CR>zz
 nnoremap <F9> :GitGutterPreviewHunk<CR>
 
+" Open terminal at the bottom of the current window and go to insert mode
+nnoremap <leader>t :bo new<CR>:te<CR>i
+
 " --- PLUGINS -----------------------------------------------------------------
 
 " vim-airline setup
