@@ -99,9 +99,6 @@ nnoremap <C-s> :find %:t:r.cpp<CR>
 " Ctrl-P replacement
 nnoremap <C-p> :FuzzyOpen<CR>
 
-" Search with Ag the current word
-nnoremap <C-a> :Ag <cword><CR> 
-
 " Moving through git hunks
 nnoremap <F7> :GitGutterPrevHunk<CR>zz
 nnoremap <F8> :GitGutterNextHunk<CR>zz
