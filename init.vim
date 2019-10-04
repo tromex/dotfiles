@@ -87,6 +87,9 @@ set wildmenu
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
 
+" Close current buffer
+nnoremap <Leader><F4> :bd<CR>
+
 " Move to c++ header file
 nnoremap <C-h> :find %:t:r.h<CR>
 
@@ -96,13 +99,13 @@ nnoremap <C-s> :find %:t:r.cpp<CR>
 " Ctrl-P replacement
 nnoremap <C-p> :FuzzyOpen<CR>
 
-" Search with Ag the current word
-nnoremap <C-a> :Ag <cword><CR> 
-
 " Moving through git hunks
 nnoremap <F7> :GitGutterPrevHunk<CR>zz
 nnoremap <F8> :GitGutterNextHunk<CR>zz
 nnoremap <F9> :GitGutterPreviewHunk<CR>
+
+" Open terminal at the bottom of the current window and go to insert mode
+nnoremap <leader>t :bo new<CR>:te<CR>i
 
 " --- PLUGINS -----------------------------------------------------------------
 
