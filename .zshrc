@@ -1,14 +1,17 @@
 
 # ARM toolchains
-export ARM32=/home/tromex/dev/armsystem/toolchain-A32
-export ARM64=/home/tromex/dev/armsystem/toolchain-A64
+export ARM32=$HOME/dev/armsystem/toolchain-A32
+export ARM64=$HOME/dev/armsystem/toolchain-A64
 
 # CUDA exports
 export PATH=/usr/local/cuda-10.0/bin:${PATH:+${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}}
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/tromex/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+
+# Path required to run dmenu_command_launcher commands
+export DMENU_COMMANDS="$HOME/scripts/dmenu"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -99,11 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias svim="sudo vim"
+alias v="nvim"
+alias sv="sudo vim"
 alias mcm="make clean && make"
 
 # added by Anaconda3 5.3.0 installer
@@ -113,13 +113,15 @@ __conda_setup="$(CONDA_REPORT_ERRORS=false '/home/tromex/anaconda3/bin/conda' sh
 if [ $? -eq 0 ]; then
     \eval "$__conda_setup"
 else
-    if [ -f "/home/tromex/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/tromex/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
         CONDA_CHANGEPS1=false conda activate base
     else
-        \export PATH="/home/tromex/anaconda3/bin:$PATH"
+        \export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda init <<<
-#
+
+## Replace , for . in numeric keyboard
+setxkbmap de -option kpdl:dot
