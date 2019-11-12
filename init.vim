@@ -8,8 +8,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-"Plug 'morhetz/gruvbox' " color theme
-Plug 'lifepillar/vim-solarized8' " color theme
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocompletion
 Plug 'Shougo/deoplete-clangx' " completion using clang
 Plug 'Shougo/neoinclude.vim' " completion from header files
@@ -29,11 +27,6 @@ set tw=139
 set nowrap
 set fo-=t " dont't auto wrap text when typing
 set rnu
-
-" Color scheme
-set termguicolors
-set background=dark
-colorscheme solarized8
 
 " Tabs are 4 spaces
 set tabstop=4
