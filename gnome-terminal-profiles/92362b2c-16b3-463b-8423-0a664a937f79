@@ -1,0 +1,21 @@
+[/]
+foreground-color='#e6e6e8e8efef'
+visible-name='NeutronLight'
+scrollbar-policy='never'
+palette=['rgb(35,37,43)', 'rgb(181,64,54)', 'rgb(90,185,119)', 'rgb(222,181,102)', 'rgb(106,124,147)', 'rgb(164,121,157)', 'rgb(71,155,174)', 'rgb(230,232,239)', 'rgb(35,37,43)', 'rgb(196,85,75)', 'rgb(90,185,119)', 'rgb(222,181,102)', 'rgb(117,136,162)', 'rgb(170,128,163)', 'rgb(55,135,154)', 'rgb(235,237,242)']
+bold-is-bright=true
+use-system-font=false
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+use-transparent-background=true
+font='Hack 11'
+use-theme-transparency=false
+allow-bold=true
+scrollback-unlimited=true
+bold-color-same-as-fg=true
+bold-color='#e6e6e8e8efef'
+background-color='rgb(33,34,37)'
+background-transparency-percent=19
+highlight-background-color='#'
+highlight-foreground-color='#'
