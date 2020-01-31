@@ -4,8 +4,8 @@ export ARM32=$HOME/dev/armsystem/toolchain-A32
 export ARM64=$HOME/dev/armsystem/toolchain-A64
 
 # CUDA exports
-export PATH=/usr/local/cuda-10.0/bin:${PATH:+${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}}
+#export PATH=/usr/local/cuda-10.0/bin:${PATH:+${PATH}}
+#export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}}
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -17,7 +17,7 @@ export DMENU_COMMANDS="$HOME/scripts/dmenu"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,24 +103,25 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias v="nvim"
-alias sv="sudo vim"
 alias mcm="make clean && make"
 
 # added by Anaconda3 5.3.0 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/tromex/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="$HOME/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+
+#__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/tromex/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    \eval "$__conda_setup"
+#else
+#    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "$HOME/anaconda3/etc/profile.d/conda.sh"
+#        CONDA_CHANGEPS1=false conda activate base
+#    else
+#        \export PATH="$PATH:$HOME/anaconda3/bin"
+#    fi
+#fi
+#unset __conda_setup
+
 # <<< conda init <<<
 
 ## Replace , for . in numeric keyboard
