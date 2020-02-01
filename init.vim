@@ -9,14 +9,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocompletion
-Plug 'Shougo/deoplete-clangx' " completion using clang
-Plug 'Shougo/neoinclude.vim' " completion from header files
 Plug 'octol/vim-cpp-enhanced-highlight' " syntax highlighting for c++
 Plug 'numkil/ag.nvim' " Ag command from nvim
 Plug 'scrooloose/nerdtree' " File navigation with NERDTree
 Plug 'tikhomirov/vim-glsl' " syntax highlighting for GLSL
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' } " Gdb, LLDB and PDB integration :)
 Plug 'cloudhead/neovim-fuzzy' " Fuzzy file finder. Requires install fzy (sudo apt install fzy)
+Plug 'junegunn/fzf' " Multi-entry selection UI.
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
+" more info on clangd integration with LanguageClient-neovim at https://d0ot.github.io/2019/09/28/Neovim-clangd/
 
 call plug#end()
 
@@ -62,15 +63,8 @@ nnoremap <Leader>w :w<CR>
 " Search current word with Ag
 nnoremap <Leader>f :Ag <cword><CR>
 
-" Windows navigation with Alt+{h,j,k,l} also with terminal mode
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+" Change terminal to Normal mode
+tnoremap <C-n> <C-\><C-n>
 
 " Define path to make :find work as expected
 set path+=.,**,,
@@ -119,6 +113,17 @@ let g:deoplete#enable_at_startup = 1
 
 "" deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" LanguageClient setup
+set signcolumn=yes " make sign column always visible
+let g:LanguageClient_autoStart = 1 " enable neovim-LanguageClient
+let g:LanguageClient_serverCommands = { 'cpp': ['clangd'] } " set clangd as server for C++
+set completefunc=LanguageClient#complete " set complete function for deoplete.vim
+
+" LanguageClient shortcuts
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <leader>r :call LanguageClient_textDocument_references()<CR>
 
 " NERDTree setup
 map <C-n> :NERDTreeToggle<CR>
