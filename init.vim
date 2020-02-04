@@ -94,6 +94,10 @@ nnoremap <F9> :GitGutterPreviewHunk<CR>
 " Open terminal at the bottom of the current window and go to insert mode
 nnoremap <leader>t :bo new<CR>:te<CR>i
 
+" User-Defined Commands
+" Filter (usage: :Filter pattern) -> creates a new buffer with the filter result
+command! -nargs=? Filter let @a='' | execute 'g/<args>/y A' | new | setlocal bt=nofile | put! a
+
 " --- PLUGINS -----------------------------------------------------------------
 
 " vim-airline setup
