@@ -95,8 +95,8 @@ nnoremap <leader>t :bo new<CR>:te<CR>i
 
 " Copy & Paster into clipboard
 vnoremap <leader>y "+y
-noremap <leader>p "+p
-noremap <leader>P "+P
+noremap <leader>p "*p
+noremap <leader>P "*P
 
 " --- PLUGINS -----------------------------------------------------------------
 
