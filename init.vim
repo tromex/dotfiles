@@ -40,7 +40,6 @@ set expandtab
 set mouse=a
 
 " fix strange characters problem on some terminal emulators
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 set guicursor=
 
 " netrw options
@@ -93,6 +92,11 @@ nnoremap <F9> :GitGutterPreviewHunk<CR>
 
 " Open terminal at the bottom of the current window and go to insert mode
 nnoremap <leader>t :bo new<CR>:te<CR>i
+
+" Copy & Paster into clipboard
+vnoremap <leader>y "+y
+noremap <leader>p "+p
+noremap <leader>P "+P
 
 " --- PLUGINS -----------------------------------------------------------------
 
