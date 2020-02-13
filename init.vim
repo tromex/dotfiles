@@ -98,6 +98,10 @@ vnoremap <leader>y "+y
 noremap <leader>p "*p
 noremap <leader>P "*P
 
+" User-Defined Commands
+" Filter (usage: :Filter pattern) -> creates a new buffer with the filter result
+command! -nargs=? Filter let @a='' | execute 'g/<args>/y A' | new | setlocal bt=nofile | put! a
+
 " --- PLUGINS -----------------------------------------------------------------
 
 " vim-airline setup
